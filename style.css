@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(245, 245, 245);
+}
+
+#game {
+  display: flex;
+  justify-content: center;
+}
+
+#player-turn {
+  text-align: center;
+}
+
+.game-table {
+  background-color: black;
+  border-radius: 6px;
+  box-shadow: 0 0 15px rgb(0 0 0 / 20%);
+}
+
+.game-table td {
+  width: 70px;
+  height: 70px;
+  padding: 20px;
+  text-align: center;
+  font-size: 50px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+#score {
+  display: flex;
+  justify-content: center;
+}
+
+.player-score {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 20px;
+}
+
+.player-score h2 {
+  font-size: 30px;
+  color: rgb(109, 109, 109);
+}
+
+.player-score p {
+  font-size: 35px;
+  margin-left: 10px;
+}
+
+#win-card {
+  position: absolute;
+  top: 0px; left: 0px;
+  height: 100vh;
+  width: 100vw;
+  background-color: #3ac163ef;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+#win-card div {
+  width: 380px;
+}
+
+#win-card h2 {
+  text-align: center;
+  color: white;
+}
+
+#win-card a {
+  display: inline-block;
+}
+
+#card-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  border-radius: 50px;
+  color: white;
+  font-weight: bold;
+  padding: 15px 25px;
+  border-radius: 4px;
+  background: #c25433;
+  transition: background 0.3s ease;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #c23333;
+  text-decoration: none;
+  color: white;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Impossible morpion</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="card">
+      <div id="game">
+        <div>
+          <h1 id="player-turn"></h1>
+          <table class="game-table">
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div id="score">
+        <div class="player-score">
+          <h2>Player 1 score:</h2>
+          <p id="player-one-score">0</p>
+        </div>
+        <div class="player-score">
+          <h2>Player 2 score:</h2>
+          <p id="player-two-score">0</p>
+        </div>
+      </div>
+    </div>
+    <div id="win-card">
+      <div>
+        <h2 id="message-win"></h2>
+        <div id="card-btn">
+          <a href="#" class="btn">Restart</a>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
