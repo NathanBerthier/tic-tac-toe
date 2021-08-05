@@ -115,9 +115,12 @@ const isWin = (el) => {
   return false;
 };
 
+let turnPlayed = 0;
+
 const addEle = (el) => {
   if (el.innerText === '' && turn === "playerOne") {
     el.innerText = "✅";
+    turnPlayed += 1;
     const win = isWin(el);
     if (win) {
       return true;
@@ -125,6 +128,7 @@ const addEle = (el) => {
     turn = playerTurn();
   } else if (el.innerText === '' && turn === "playerTwo") {
     el.innerText = "❌";
+    turnPlayed += 1;
     const win = isWin(el);
     if (win) {
       return true;
@@ -166,12 +170,15 @@ tiles.forEach((el) => {
     if (addEle(el)) {
       winPlayerMessage.innerText = `Congratulations, ${getPlayer()} win! 🎉`;
       winMessage.style.display = 'flex';
+      addWin();
+    } else if (turnPlayed === 9) {
+      winPlayerMessage.innerText = `Congratulations, no one win! 🎉`;
+      winMessage.style.display = 'flex';
     }
   });
 });
 
 restarBtn.addEventListener('click', () => {
-  addWin();
   restartGame();
   winMessage.style.display = 'none';
 });
