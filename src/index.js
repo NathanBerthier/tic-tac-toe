@@ -141,6 +141,7 @@ const addEle = (el) => {
 const restartGame = () => {
   playerOne = 1;
   playerTwo = 0;
+  turnPlayed = 0;
   turn = playerTurn();
   tiles.forEach((el) => {
     el.innerText = '';
